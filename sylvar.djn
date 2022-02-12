@@ -197,10 +197,10 @@ après capturer bureau:
   changer le joueur possède l'image de du bureau;
   dire "Vous possédez désormais une image du bureau.".
 après capturer établi:
-  changer le joueur possède l'image de l'établi';
+  changer le joueur possède l'image de l'établi;
   dire "Vous possédez désormais une image de l'établi.".
 après capturer alambic:
-  changer le joueur possède l'image de l'alambic';
+  changer le joueur possède l'image de l'alambic;
   dire "Vous possédez désormais une image de l'alambic.".
 après capturer liquide:
   changer le joueur possède l'image du liquide;
