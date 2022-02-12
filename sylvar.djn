@@ -6,6 +6,8 @@ Le lien du site web est "https://du-de-au-clavier.net".
 
 PARTIE "Initialisation"
 Le temps est un compteur initialisé à 0.
+Le captureur est un objet.
+L'image du labo est un objet.
 
 PARTIE "Jeu"
 Scène "Couloir"
@@ -72,7 +74,7 @@ Le cadenas rouge est un objet dans le labo.
 Le cadenas rouge est verrouillé et couvert.
 
 Le grand alambic est un contenant dans la pièce secrète. Son aperçu est "Cette pièce n'est éclairée que par quelques bougies ainsi que la lueur verdâtre du liquide dans un grand alambic qui prend la majeur partie de la place."
-Interpréter l'alambic comme le grand alambic.
+Interpréter alambic comme le grand alambic.
 
 Le liquide vert est un objet dans le grand alambic. Sa description est "Il semble s'agir de blob, mais en grande quantité et dans un alambic? Etrange.".
 
@@ -98,6 +100,7 @@ PARTIE "Règles"
 
 avant commencer le jeu:
   dire "Vous avez été embauché(e) pour fouiller le labo d'une alchimiste célèbre, Sylvar XVIII. Votre employeur, un de ses rivaux, vous a chargé(e) d'y trouver des éléments compromettants et de vous éclipser avant qu'elle revienne.";
+  changer le joueur possède le captureur;
   changer le joueur se trouve dans le labo.
   
   
@@ -145,10 +148,24 @@ après ouvrir le cadenas rouge avec la clé rouge ou déverrouiller le cadenas r
   changer la trappe est déverrouillée;
   fin si.
 
-  
 après lire le livre bleu:
-  changer la clé n'est plus cachée;
+  changer la clé bleue n'est plus cachée;
   dire "[texte ceci]".
+  
+-- ****************
+-- *    CAPTURER   *
+-- ****************
+ 
+-- Capturer ceci
+capturer ceci est une action qui concerne un élément.
+ 
+
+  
+
+
+après capturer labo:
+  changer le joueur possède l'image du labo;
+  dire "Vous possédez désormais une image du labo.".
   
 après aller couloir ou aller sud:
   dire "Le jeu est terminé";
