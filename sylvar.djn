@@ -8,6 +8,30 @@ PARTIE "Initialisation"
 Le temps est un compteur initialisé à 0.
 Le captureur est un objet.
 L'image du labo est un objet.
+L'image de la fenêtre est un objet.
+L'image du bureau est un objet.
+L'image de l'établi est un objet.
+L'image de l'alambic est un objet.
+L'image du liquide est un objet.
+L'image de la clé rouge est un objet.
+L'image du tapis est un objet.
+L'image de l'étage est un objet.
+L'image de la bibliothèque est un objet.
+L'image de l'étagère est un objet.
+L'image du livre bleu est un objet.
+L'image du livre rouge est un objet.
+L'image du livre vert est un objet.
+L'image de la clé bleue est un objet.
+L'image de la pièce secrète est un objet.
+L'image de la trappe est un objet.
+L'image du cadenas bleu est un objet.
+L'image du cadenas rouge est un objet.
+L'image du grand alambic est un objet.
+L'image du liquide vert est un objet.
+L'image de la chaise est un objet.
+L'image des chaînes est un objet.
+L'image du bureau rangé est un objet.
+L'image du cahier est un objet.
 
 PARTIE "Jeu"
 Scène "Couloir"
@@ -152,6 +176,10 @@ après lire le livre bleu:
   changer la clé bleue n'est plus cachée;
   dire "[texte ceci]".
   
+après aller couloir ou aller sud:
+  dire "Le jeu est terminé";
+  terminer le jeu.
+  
 -- ****************
 -- *    CAPTURER   *
 -- ****************
@@ -159,17 +187,87 @@ après lire le livre bleu:
 -- Capturer ceci
 capturer ceci est une action qui concerne un élément.
  
-
-  
-
-
 après capturer labo:
   changer le joueur possède l'image du labo;
   dire "Vous possédez désormais une image du labo.".
+après capturer fenêtre:
+  changer le joueur possède l'image de la fenêtre;
+  dire "Vous possédez désormais une image de la fenêtre.".
+après capturer bureau:
+  changer le joueur possède l'image de du bureau;
+  dire "Vous possédez désormais une image du bureau.".
+après capturer établi:
+  changer le joueur possède l'image de l'établi';
+  dire "Vous possédez désormais une image de l'établi.".
+après capturer alambic:
+  changer le joueur possède l'image de l'alambic';
+  dire "Vous possédez désormais une image de l'alambic.".
+après capturer liquide:
+  changer le joueur possède l'image du liquide;
+  dire "Vous possédez désormais une image du liquide.".
+après capturer clé rouge:
+  changer le joueur possède l'image de la clé rouge;
+  dire "Vous possédez désormais une image de la clé rouge.".
+après capturer tapis:
+  changer le joueur possède l'image du tapis;
+  dire "Vous possédez désormais une image du tapis.".
+après capturer étage:
+  changer le joueur possède l'image de l'étage;
+  dire "Vous possédez désormais une image de l'étage.".
+après capturer bibliothèque:
+  changer le joueur possède l'image de la bibliothèque;
+  dire "Vous possédez désormais une image de la bibliothèque.".
+après capturer étagère:
+  changer le joueur possède l'image de l'étagère;
+  dire "Vous possédez désormais une image de l'étagère.".
+après capturer livre bleu:
+  changer le joueur possède l'image du livre bleu;
+  dire "Vous possédez désormais une image du livre bleu.".
+après capturer livre rouge:
+  changer le joueur possède l'image du livre rouge;
+  dire "Vous possédez désormais une image du livre rouge.".
+après capturer livre vert:
+  changer le joueur possède l'image du livre vert;
+  dire "Vous possédez désormais une image du livre vert.".
+après capturer clé bleue:
+  changer le joueur possède l'image de la clé bleue;
+  dire "Vous possédez désormais une image de la clé bleue.".
+après capturer pièce secrète:
+  changer le joueur possède l'image de la pièce secrète;
+  dire "Vous possédez désormais une image de la pièce secrète.".
+après capturer trappe:
+  changer le joueur possède l'image de la trappe;
+  dire "Vous possédez désormais une image de la trappe.".
+après capturer cadenas bleu:
+  changer le joueur possède l'image du cadenas bleu;
+  dire "Vous possédez désormais une image du cadenas bleu.".
+après capturer cadenas rouge:
+  changer le joueur possède l'image du cadenas rouge;
+  dire "Vous possédez désormais une image du cadenas rouge.".
+après capturer grand alambic:
+  changer le joueur possède l'image du grand alambic;
+  dire "Vous possédez désormais une image du grand alambic.".
+après capturer liquide vert:
+  changer le joueur possède l'image du liquide vert;
+  dire "Vous possédez désormais une image du liquide vert.".
+après capturer chaise:
+  changer le joueur possède l'image de la chaise;
+  dire "Vous possédez désormais une image de la chaise.".
+après capturer chaînes:
+  changer le joueur possède l'image des chaînes;
+  dire "Vous possédez désormais une image des chaînes.".
+après capturer bureau rangé:
+  changer le joueur possède l'image du bureau rangé;
+  dire "Vous possédez désormais une image du bureau rangé.".
+après capturer journal:
+  changer le joueur possède l'image du journal;
+  dire "Vous possédez désormais une image du journal.".
+
   
-après aller couloir ou aller sud:
-  dire "Le jeu est terminé";
-  terminer le jeu.
+  
+  
+  
+
 
 
   
