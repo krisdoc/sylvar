@@ -4,10 +4,10 @@ L’auteur du jeu est "KrisDoC".
 Le titre du site web est "Du Dé au Clavier".
 Le lien du site web est "https://du-de-au-clavier.net".
 
-
+PARTIE "Initialisation"
 Le temps est un compteur initialisé à 0.
 
-
+PARTIE "Jeu"
 -- LE LABO
 Le labo est un lieu.
   Sa description est "Le laboratoire est petit, éclairé par une fenêtre donnant au nord. A droite, un escalier montant. Un bureau sous un monceau de papiers, une bibliothèque surchargée près de l'escalier et un établi qui prend tout le mur gauche complètent le tableau."
@@ -49,7 +49,7 @@ Le livre rouge est un objet sur l'étagère.
 
 Le sommet est un lieu.
 Le sommet est un lieu en haut du labo.
-  Sa description est "voici le sommet."
+  Son aperçu est "voici le sommet."
   
 -- LA PIECE SECRETE
 
@@ -82,6 +82,8 @@ Le journal est un objet sur le bureau rangé.
   Sa description est "Il s'agit d'un journal avec le détail d'expériences.".
   Son texte est "Vous feuilletez le journal. [1ère fois]Une entrée retient votre attention: Le sujet du jour s'est particulèrement débattu. Cela m'a forcé à conduire le test sur cadavre de manière prématurée. Test plutôt concluant d'ailleurs. A quelque chose malheur est bon. [2ème fois]Une autre entrée: L'objectif final est la suppression de la magie à grande échelle. Cela ne pourra s'atteindre qu'en utilisant le blob, j'en ai l'intime conviction. Ce liquide est un concentré de l'essence de la magie. Il suffit d'inverser sa nature. Et alors nous serons libres, nous pourrons terrasser la tyrannie des Grands Mages, ces cultistes du Mana.".
   Interpréter le cahier comme le journal.
+  
+PARTIE "Règles"
 
 avant commencer le jeu:
   dire "Vous avez été embauché(e) pour fouiller le labo d'une alchimiste célèbre, Sylvar XVIII. Votre employeur, un de ses rivaux, vous a chargé(e) d'y trouver des éléments compromettants et de vous éclipser avant qu'elle revienne.";
