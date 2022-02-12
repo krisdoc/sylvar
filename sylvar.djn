@@ -8,9 +8,12 @@ PARTIE "Initialisation"
 Le temps est un compteur initialisé à 0.
 
 PARTIE "Jeu"
--- LE LABO
-Le labo est un lieu.
-  Sa description est "Le laboratoire est petit, éclairé par une fenêtre donnant au nord. A droite, un escalier montant. Un bureau sous un monceau de papiers, une bibliothèque surchargée près de l'escalier et un établi qui prend tout le mur gauche complètent le tableau."
+Scène "Couloir"
+Le couloir est un lieu.
+
+Scène "Labo"
+Le labo est un lieu au nord du couloir.
+  Sa description est "Le laboratoire est petit, éclairé par une fenêtre donnant au nord. A droite, un escalier montant. Un bureau sous un monceau de papiers, une bibliothèque surchargée près de l'escalier et un établi qui prend tout le mur gauche complètent le tableau.".
   
 
 La fenêtre est un objet.
@@ -25,33 +28,35 @@ L'établi est un support dans le labo.
 
 
 L'alambic est un contenant sur l'établi.
-Le liquide est dans l'alambic.
+Le liquide est un contenant dans l'alambic.
+
+La clé rouge est un objet dans le liquide.
 
 Le tapis est un objet sur le sol du labo.
 Le tapis est dans le labo.
 
-La bibliothèque est un contenant dans le labo.
+
+
+Scène "L'étage"
+
+L'étage est un lieu.
+L'étage est un lieu en haut du labo.
+  
+La bibliothèque est un contenant dans l'étage.
 L'étagère est un support dans la bibliothèque.
 
 Le livre bleu est un objet sur l'étagère. 
-  Le texte du livre bleu est "Titre: De l'alchimie et de son étude. Par Sylvar XVI. De nombreuses formules et schémas. Entre les pages, une clé est cachée.".
+  Le texte du livre bleu est "Titre: De l'alchimie et de son étude. Par Sylvar XVI. De nombreuses formules et schémas. Entre les pages, une clé bleue est cachée.".
 
-La clé est un objet dans le labo.
-La clé est cachée.
+La clé bleue est un objet dans l'étage.
+La clé bleue est cachée.
 
 Le livre vert est un objet sur l'étagère.
   Le texte du livre vert est "Titre: Du blob et de ses propriétés: fantasmes et perspectives. Par Teknaziex et Verdoza. Vous commencez à lire: Le blob, ce sang verdâtre commun à tous les monstres revenants affrontés par les donjonneuxes, vous savez, ces jeunes adeptes de l'adrénaline qui affrontent les monstres d'antan pour de l'audimat,...".
 Le livre rouge est un objet sur l'étagère.
   Le texte du livre rouge est "Titre: De la transmutation des métaux: une étude du plomb et de l'or. Par Timune et Sylvar XVI".
-
--- LE SOMMET
-
-
-Le sommet est un lieu.
-Le sommet est un lieu en haut du labo.
-  Son aperçu est "voici le sommet."
   
--- LA PIECE SECRETE
+Scène "La pièce secrète"
 
 La pièce secrète est un lieu.
 La pièce secrète est un lieu en bas du labo. 
@@ -59,6 +64,12 @@ Interpréter la pièce comme la pièce secrète.
 
 La trappe est une porte en bas du labo. 
 La trappe est fermée, couverte et verrouillée.
+
+Le cadenas bleu est un objet dans le labo.
+Le cadenas bleu est verrouillé et couvert.
+
+Le cadenas rouge est un objet dans le labo.
+Le cadenas rouge est verrouillé et couvert.
 
 Le grand alambic est un contenant dans la pièce secrète. Son aperçu est "Cette pièce n'est éclairée que par quelques bougies ainsi que la lueur verdâtre du liquide dans un grand alambic qui prend la majeur partie de la place."
 Interpréter l'alambic comme le grand alambic.
@@ -100,16 +111,48 @@ après une action quelconque:
 
 après déplacer tapis ou tirer tapis:
   changer la trappe n'est plus couverte;
-  dire "Sous le tapis, se trouve une trappe.".
+  changer le cadenas bleu n'est plus couvert;
+  changer le cadenas rouge n'est plus couvert;
+  dire "Sous le tapis, se trouve une trappe avec deux cadenas: un bleu et un rouge.".
 
-après ouvrir la trappe avec la clé ou déverrouiller la trappe:
+avant ouvrir le cadenas bleu avec la clé bleue ou déverrouiller le cadenas bleu avec la clé bleue:
+  si le joueur ne possède pas la clé bleue:
+    dire "Vous ne possédez pas cette clé.";
+    stopper l'action;
+  sinon
+    exécuter action;
+  fin si.
+
+après ouvrir le cadenas bleu avec la clé bleue ou déverrouiller le cadenas bleu avec la clé bleue:
+  changer le cadenas bleu est déverrouillé;
+  dire "La serrure du cadenas bleu cède.";
+  si le cadenas rouge est déverrouillé:
   changer la trappe est déverrouillée;
-  dire "La serrure du cadenas cède.".
+  fin si.
+
+avant ouvrir le cadenas rouge avec la clé rouge ou déverrouiller le cadenas rouge avec la clé rouge:
+  si le joueur ne possède pas la clé rouge:
+    dire "Vous ne possédez pas cette clé.";
+    stopper l'action;
+  sinon
+    exécuter action;
+  fin si.
+
+après ouvrir le cadenas rouge avec la clé rouge ou déverrouiller le cadenas rouge avec la clé rouge:
+  changer le cadenas rouge est déverrouillé;
+  dire "La serrure du cadenas rouge cède.";
+  si le cadenas bleu est déverrouillé:
+  changer la trappe est déverrouillée;
+  fin si.
+
   
 après lire le livre bleu:
   changer la clé n'est plus cachée;
   dire "[texte ceci]".
   
+après aller couloir ou aller sud:
+  dire "Le jeu est terminé";
+  terminer le jeu.
 
 
   
