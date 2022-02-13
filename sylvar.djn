@@ -51,6 +51,7 @@ La fenêtre est dans le labo.
 Le bureau est un support.
 Le bureau est dans le labo.
   Son aperçu est "Le bureau est jonché de papiers et divers objets.".
+  Sa description est "Il s'agit principalement de notes d'expériences sur des métaux, rien de surprenant pour une alchimiste.".
   
 L'établi est un support dans le labo.
   Son aperçu est "L'établi prend tout le mur gauche et est recouvert de divers appareils.".
@@ -92,7 +93,7 @@ La clé bleue est cachée.
 Le livre vert est un objet sur l'étagère.
   Son aperçu est "Un livre à la couverture verte semble avoir été replacé précipitamment.".
   Sa description est "Titre: Du blob et de ses propriétés: fantasmes et perspectives. Par Teknaziex et Verdoza.".
-  Le texte du livre vert est "Le blob, ce sang verdâtre commun à tous les monstres revenants affrontés par les donjonneuxes, vous savez, ces jeunes adeptes de l'adrénaline qui affrontent les monstres d'antan pour de l'audimat,...".
+  Le texte du livre vert est "Le blob, ce sang verdâtre commun à tous les monstres revenants affrontés par les donjonneuxes, vous savez, ces jeunes adeptes de l'adrénaline qui affrontent les monstres d'antan pour l'attention de leurs pairs,...".
 Le livre rouge est un objet sur l'étagère.
   Son aperçu est "Un livre à la couverture rouge est recouvert de poussière.".
     Sa description est "Titre: De la transmutation des métaux: une étude du plomb et de l'or. Par Timune et Sylvar XVI".
