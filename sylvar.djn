@@ -32,7 +32,7 @@ L'image du liquide vert est un objet.
 L'image de la chaise est un objet.
 L'image des chaînes est un objet.
 L'image du bureau rangé est un objet.
-L'image du cahier est un objet.
+L'image du journal est un objet.
 
 PARTIE "Jeu"
 Scène "Couloir"
@@ -209,6 +209,7 @@ après aller couloir ou aller sud:
     si le joueur possède l'image du journal ou le journal, dire "Bravo, vous ramenez une preuve des agissements de Sylvar.";
     si le joueur possède le journal, dire "Ne va-t-elle pas s'aperçevoir de la disparition de son journal? Cela va lui mettre la puce à l'oreille. Il sera plus difficile à votre employeur de mettre fin à ses actions.";
     si le joueur ne possède ni le journal ni l'image du journal ni l'image de la chaise ni l'image des chaînes, dire "Vous ne ramenez aucune preuve. Votre employeur ne va pas être content de vos actions.";
+    si le joueur possède soit l'image de la chaise soit l'image des chaînes, dire "Le manque d'éthique de Sylvar ne restera pas impuni, bravo.";
     terminer le jeu.
   
 
