@@ -142,7 +142,7 @@ Le journal est un objet sur le bureau rangé.
 PARTIE "Règles"
 
 avant commencer le jeu:
-  dire "Vous avez été embauché(e) pour fouiller le labo d'une alchimiste célèbre, Sylvar XVIII. Votre employeur, un de ses rivaux, vous a chargé(e) d'y trouver des éléments compromettants et de vous éclipser avant qu'elle revienne. Vous disposez d'un captureur qui vous permet de capturer des images durables des éléments choisis.";
+  dire "Vous avez été embauché(e) pour fouiller le labo d'une alchimiste célèbre, Sylvar XVIII. Votre employeur, un de ses rivaux, vous a chargé(e) d'y trouver des éléments compromettants et de vous éclipser avant qu'elle revienne. Vous disposez d'un captureur qui vous permet de capturer des images durables d'un élément choisi.";
   changer le joueur possède le captureur;
   changer le joueur se trouve dans le labo.
   
@@ -152,8 +152,7 @@ après une action quelconque:
   terminer l’action avant;
   si l’infinitif de l’action n’est ni effacer ni regarder ni afficher:
     changer le temps augmente de 1;
-  fin si
-  dire "Il s'est passé [c temps].";
+  fin si;
   si le temps vaut 50, dire "Prenez garde au retour de Sylvar, qui ne va pas tarder.";
   si le temps vaut 100:
     dire "Sylvar est de retour et vous surprend dans son labo. Vous avez perdu.";
@@ -206,6 +205,9 @@ après déplacer alambic:
 
 après aller couloir ou aller sud:
     dire "Le jeu est terminé.";
+    si le joueur possède l'image du journal ou le journal, dire "Bravo, vous ramenez une preuve des agissements de Sylvar.";
+    si le joueur possède le journal, dire "Ne va-t-elle pas s'aperçevoir de la disparition de son journal? Cela va lui mettre la puce à l'oreille. Il sera plus difficile à votre employeur de mettre fin à ses actions.";
+    si le joueur ne possède ni le journal ni l'image du journal ni l'image de la chaise ni l'image des chaînes, dire "Vous ne ramenez aucune preuve. Votre employeur ne va pas être content de vos actions.";
     terminer le jeu.
   
 
