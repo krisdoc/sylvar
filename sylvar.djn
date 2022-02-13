@@ -6,6 +6,7 @@ Le lien du site web est "https://du-de-au-clavier.net".
 
 PARTIE "Initialisation"
 Le temps est un compteur initialisé à 0.
+L'historique est une liste.
 Le captureur est un objet.
 L'image du labo est un objet.
 L'image de la fenêtre est un objet.
@@ -71,7 +72,6 @@ Le tapis est dans le labo.
 
 Scène "L'étage"
 
-
 L'étage est un lieu en haut du labo.
   Sa description est "Une vase pièce ronde que le bruit de la rue n'atteint pas.".
   
@@ -102,6 +102,8 @@ Scène "La pièce secrète"
 
 La pièce secrète est un lieu.
 La pièce secrète est un lieu en bas du labo. 
+  Son aperçu est "De mêmes dimensions que le labo, cette pièce secrète n'est éclairée que par quelques bougies.".
+
 Interpréter la pièce comme la pièce secrète.
 
 La trappe est une porte en bas du labo. 
@@ -113,7 +115,7 @@ Le cadenas bleu est verrouillé et couvert.
 Le cadenas rouge est un objet dans le labo.
 Le cadenas rouge est verrouillé et couvert.
 
-Le grand alambic est un contenant dans la pièce secrète. Son aperçu est "Cette pièce n'est éclairée que par quelques bougies ainsi que la lueur verdâtre du liquide dans un grand alambic qui prend la majeur partie de la place."
+Le grand alambic est un contenant dans la pièce secrète. Son aperçu est "La lueur verdâtre du liquide du grand alambic qui occupe le centre de la pièce projette des ombres inquiétantes.".
 Interpréter alambic comme le grand alambic.
 
 Le liquide vert est un objet dans le grand alambic. Sa description est "Il semble s'agir de blob, mais en grande quantité et dans un alambic? Etrange.".
@@ -131,10 +133,11 @@ Son aperçu est "Un bureau parfaitement rangé termine le tableau.".
 Interpréter le bureau comme le bureau rangé.
 
 Le journal est un objet sur le bureau rangé.
-  Son aperçu est "Un cahier se trouve sur le bureau.".
-  Sa description est "Il s'agit d'un journal avec le détail d'expériences.".
-  Son texte est "Vous feuilletez le journal. [1ère fois]Une entrée retient votre attention: Le sujet du jour s'est particulèrement débattu. Cela m'a forcé à conduire le test sur cadavre de manière prématurée. Test plutôt concluant d'ailleurs. A quelque chose malheur est bon. [2ème fois]Une autre entrée: L'objectif final est la suppression de la magie à grande échelle. Cela ne pourra s'atteindre qu'en utilisant le blob, j'en ai l'intime conviction. Ce liquide est un concentré de l'essence de la magie. Il suffit d'inverser sa nature. Et alors nous serons libres, nous pourrons terrasser la tyrannie des Grands Mages, ces cultistes du Mana.".
-  Interpréter le cahier comme le journal.
+  Son aperçu est "Un journal se trouve sur le bureau.".
+  Sa description est "Il s'agit d'un journal à couverture en cuir.".
+  Son texte est "[1ère fois]Une première entrée retient votre attention: Le sujet du jour s'est particulèrement débattu. Cela m'a forcé à conduire le test sur cadavre de manière prématurée. Test plutôt concluant d'ailleurs. A quelque chose malheur est bon. [2ème fois]Une autre entrée: L'objectif final est la suppression de la magie à grande échelle. Cela ne pourra s'atteindre qu'en utilisant le blob, j'en ai l'intime conviction. Ce liquide est un concentré de l'essence de la magie. Il suffit d'inverser sa nature. Et alors nous serons libres, nous pourrons terrasser la tyrannie des Grands Mages, ces cultistes du Mana.".
+ 
+ 
   
 PARTIE "Règles"
 
@@ -199,11 +202,13 @@ après lire le livre bleu:
   
 après déplacer alambic:
   dire "Il y a une clé rouge à l'endroit où se trouvait l'alambic.".
-  
+
+
 après aller couloir ou aller sud:
-  dire "Le jeu est terminé";
-  terminer le jeu.
+    dire "Le jeu est terminé.";
+    terminer le jeu.
   
+
 -- ****************
 -- *    CAPTURER   *
 -- ****************
@@ -286,6 +291,7 @@ après capturer bureau rangé:
 après capturer journal:
   changer le joueur possède l'image du journal;
   dire "Vous possédez désormais une image du journal.".
+  
 
   
   
