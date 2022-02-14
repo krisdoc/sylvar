@@ -8,6 +8,7 @@ PARTIE "Initialisation"
 Le temps est un compteur initialisé à 0.
 L'historique est une liste.
 Le captureur est un objet.
+Sa description est "Il s'agit d'un objet permettant de garder une image durable d'un élément. (écrire: 'aide capturer' pour un exemple)".
 L'image du labo est un objet.
 L'image de la fenêtre est un objet.
 L'image du bureau est un objet.
@@ -297,9 +298,30 @@ après capturer journal:
   dire "Vous possédez désormais une image du journal.".
   
 
+  L'aide pour l'action capturer est "{*Capturer*}
+  Permet de capturer l'image d'un élément.
+  {+exemples+} :
+  > {-capturer {/bureau/}-}".
   
-  
-  
+  -- Customisation Aide
+exécuter afficher ceci:
+  si ceci est l’aide:
+    dire "{_Quelques commandes utiles_}
+      {e}- {-aide {/parler/}-} : afficher l’aide d’une commande
+      {e}- {-aller {/nord/}-} : aller vers le nord
+      {e}- {-regarder-} : regarder autours de vous
+      {e}- {-examiner {/table/}-} : examiner un élément pour trouver des objets ou des informations
+      {e}- {-capturer {/épée/}-} : prendre une image de l'épée
+      {e}- {-prendre {/épée/}-} : prendre un objet
+      {e}- {-inventaire-} : afficher le contenu de votre inventaire et notamment les images capturées
+      {e}- {-ouvrir {/porte/} avec {/clé dorée/}-} : ouvrir la porte à l’aide de la clé dorée";
+  sinonsi ceci est l’inventaire:
+    dire "{n}{n}Votre inventaire [si l’inventaire contient un objet]contient : [lister objets inventaire][sinon]est vide. [fin si]";
+    
+    
+  sinonsi ceci est les sorties ou la sortie:
+    dire "[sorties ici]";
+  fin si.
   
 
 
