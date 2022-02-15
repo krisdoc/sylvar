@@ -69,13 +69,14 @@ La clé rouge est un objet sous l'alambic.
 Le tapis est un objet sur le sol du labo.
 Le tapis est dans le labo.
   Son aperçu est "Un tapis aux motifs géométriques recouvre le sol du labo.".
-
+  
+Interpréter soulever comme déplacer.
 
 
 Scène "L'étage"
 
 L'étage est un lieu en haut du labo.
-  Sa description est "Une vase pièce ronde que le bruit de la rue n'atteint pas.".
+  Sa description est "Une vaste pièce ronde que le bruit de la rue n'atteint pas.".
   
 La bibliothèque est un contenant dans l'étage.
   Son aperçu est "Une grande bibliothèque fait un arc de cercle contre le mur.".
