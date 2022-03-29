@@ -46,7 +46,7 @@ Le labo est un lieu au nord du couloir.
 
 La fenêtre est un objet.
 La fenêtre est dans le labo.
-  Son aperçu est "Une fenêtre éclaire la pièce."
+  Son aperçu est "Une fenêtre éclaire la pièce.".
   Sa description est "On observe la rue animée en contrebas. C'est bien trop haut pour pouvoir sauter.".
 
 Le bureau est un support.
@@ -205,6 +205,15 @@ après lire le livre bleu:
 après déplacer alambic:
   dire "Il y a une clé rouge à l'endroit où se trouvait l'alambic.".
 
+avant aller couloir ou aller sud:
+  dire "Vous vous apprêtez à sortir du labo, ce qui met fin au jeu. Avez-vous les preuves nécessaires?";
+  choisir
+    choix "Oui! tout à fait":
+      exécuter l'action;
+    choix "Euh... pas vraiment, je vais rester encore un peu":
+      stopper l'action;
+      dire "Vous pouvez continuer vos recherches.";
+  fin choisir.
 
 après aller couloir ou aller sud:
     dire "Le jeu est terminé.";
